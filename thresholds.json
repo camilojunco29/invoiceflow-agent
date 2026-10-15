@@ -1,0 +1,20 @@
+{
+  "_nota": "Umbrales y supuestos FIJADOS ANTES de ejecutar las pruebas (2026-10-15). No modificar tras ver resultados.",
+  "seeds": [1, 2, 3, 4, 5],
+  "docs_per_run": 12,
+  "mix_docs_per_run": 60,
+  "assumptions": {
+    "manual_mean_s": 180,
+    "manual_sd_s": 30,
+    "review_mean_s": 60,
+    "review_sd_s": 15
+  },
+  "measures": {
+    "M1": {"name": "Exactitud de extraccion por campo", "threshold": 0.90, "op": ">="},
+    "M2": {"name": "Reduccion del tiempo de procesamiento", "threshold": 0.50, "op": ">="},
+    "M3": {"name": "Precision del registro automatico", "threshold": 0.98, "op": ">="},
+    "M4": {"name": "Tasa de automatizacion en facturas validas", "threshold": 0.80, "op": ">="},
+    "M5": {"name": "Deteccion de duplicados", "threshold": 0.95, "op": ">="},
+    "M6": {"name": "Robustez ante entradas invalidas", "threshold": 1.00, "op": ">="}
+  }
+}

@@ -1,0 +1,15 @@
+scenario,name,tipo,docs,field_accuracy,auto_registered,expected_action_match,wrong_registrations,mean_processing_ms
+S01,Factura valida sin ruido,normal,60,1.0,1.0,1.0,0,0.366
+S02,"Factura valida, ruido bajo (0.2%)",normal,60,0.9833,0.8833,0.8833,0,0.362
+S03,"Factura valida, ruido medio (1%)",normal,60,0.9067,0.5,0.5,0,0.33
+S04,"Factura valida, ruido alto (3%)",limite,60,0.8267,0.25,0.25,1,0.302
+S05,Factura de 1 solo item,limite,60,1.0,1.0,1.0,0,0.33
+S06,Factura de 12 items,limite,60,1.0,1.0,1.0,0,0.389
+S07,Duplicado: mismo numero de factura,excepcion,60,0.99,0.0,1.0,0,0.301
+S08,"Duplicado: otro numero, mismo contenido",excepcion,60,0.9667,0.0,1.0,0,0.309
+S09,Monto distinto al de la orden de compra,excepcion,60,1.0,0.0,1.0,0,0.317
+S10,Orden de compra inexistente,excepcion,60,1.0,0.0,1.0,0,0.304
+S11,Proveedor desconocido,excepcion,60,0.8,0.0,1.0,0,0.279
+S12,FALLA: documento vacio (sensor sin dato),falla,60,,0.0,1.0,0,0.037
+S13,FALLA: documento ilegible,falla,60,,0.0,1.0,0,0.042
+S14,Flujo mixto realista,mixto,300,0.9753,0.68,0.8967,0,0.324

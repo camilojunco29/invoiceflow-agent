@@ -1,0 +1,2 @@
+# InvoiceFlow-Agent solo usa la biblioteca estándar de Python (probado con 3.13).
+# No hay dependencias externas que instalar.

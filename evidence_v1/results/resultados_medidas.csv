@@ -1,0 +1,7 @@
+id,name,formula,threshold,scenarios,cases,mean,sd,ok
+M1,Exactitud de extraccion por campo,"campos correctos / campos evaluados (5 por factura: proveedor, numero, fecha, monto, items)",0.9,"S01,S02,S03,S05,S06",300,0.978,0.0096,True
+M2,Reduccion del tiempo de procesamiento,"1 - (t_agente + t_revision_humana_de_alertas) / t_manual, sobre el flujo mixto",0.5,S14,300,0.8932,0.0135,True
+M3,Precision del registro automatico,1 - registros erroneos / registros automaticos (erroneo: debia alertarse o con algun campo mal),0.98,"S01,S02,S03,S04,S05,S06,S07,S08,S09,S10,S11,S12,S13,S14",1080,0.9978,0.0049,True
+M4,Tasa de automatizacion en facturas validas,facturas validas registradas automaticamente / facturas validas,0.8,"S01,S02,S03,S05,S06",300,0.8767,0.0548,True
+M5,Deteccion de duplicados,duplicados alertados con motivo 'duplicado' / duplicados,0.95,"S07,S08",120,0.9333,0.0632,False
+M6,Robustez ante entradas invalidas,entradas invalidas escaladas sin error interno / entradas invalidas,1.0,"S12,S13",120,1.0,0.0,True
